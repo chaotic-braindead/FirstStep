@@ -1,0 +1,391 @@
+/* TODO: fix the janky layout */
+*{
+    margin: 0 0 0 0px;
+    padding: 0 0 0 0px;
+}
+p {
+    color: white;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+span {
+    padding-right: 2em;
+}
+
+body {
+    background-color: #266041;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: left;
+    padding-left:5em; 
+    padding-right:30em;
+}
+h2 {
+    text-align: center;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+/* navbar */
+nav {
+    background-color: #266041;
+    width: 100%;
+    height: 100px;
+    font-weight: bold;
+    position: fixed;
+    transition: 0.6s;
+    top: 0;
+    left: 0;    
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 5px;
+    line-height: 95px;
+}
+
+nav ul li a {
+    background-color: #266041;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    transition: background-color 0.5s
+}
+
+nav ul li a:hover {
+    background-color: #327e55;  
+}
+
+label.logo {
+    color: white;
+    line-height: 100px;
+    padding: 0 40px;
+    font-size: 30px; 
+}
+
+.cart {
+    width:15px;
+    height:15px;
+    object-position: right;
+}
+
+/* home.html */
+
+.about {
+    padding-top:18em;
+    padding-bottom: 10em;
+    background-image: url("../images/pexels-pixabay-267202.1jpg.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat no-repeat;
+    object-position: left bottom;
+}
+
+.about p {
+    padding-top:2em;
+    text-align: left;
+    margin-left: 10em;
+    margin-right: 60em;
+    margin-bottom:3em;
+}
+
+.about a {
+    margin-top: 3em;
+    margin-left: 10em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left:3em;
+    padding-right:3em;
+    background-color: #327e55;
+    border-color: #327e55;
+    font-weight: bold;
+    color:white;
+    cursor: pointer;
+    border-style: solid;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+}
+
+.about a:hover{
+    background-color: #3b9b68;
+    border-color: #3b9b68;
+}
+
+.mission {
+    background-color:white;
+    padding-top: 4em;
+    padding-bottom: 4.25em;
+    padding-left: 7em;
+    display: flex;
+
+}
+
+.mission h2 {
+    text-align: center;
+    color: #266041;
+}
+
+.mission p {
+    text-align: justify;
+    margin-left: 1em;
+    margin-right: 1em;  
+    color:#266041;
+}
+
+.who, .our{
+    float: left;
+    width: 45%;
+    border-color: #266041;
+    border-width: 2px;
+    border-style: solid ;
+    border-radius: 1em;
+    margin-right: 1em;
+}
+
+.gallery {
+    display: flexbox;
+}
+/* contactus.html */
+.contacts {
+    background-color:white; 
+    margin-left:25%; 
+    margin-right:25%; 
+    margin-top:6em; 
+    padding-top: 2em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.contacts h1 {
+    color:#266041;
+    margin-left: 3em;
+    display: contents;
+}
+
+div.contacts ul {
+    list-style-type: none;
+}
+
+div.contacts ul li p {
+    color: #266041;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+/* products */
+.productsContainer { 
+    padding:20px 20px;
+    background-color:white; 
+    margin-left:15%; 
+    margin-right:15%; 
+    margin-top:8%; 
+    margin-bottom:6%;
+}
+
+table {
+    text-align: center;
+    border: 1px solid;
+    color: #266041;
+}
+
+table td {
+    padding: 1em 1em;
+}
+table tr:nth-child(odd){
+    background-color: #ededed;
+}
+
+.productsContainer img {
+    width: 95%;
+}
+
+.desc {
+    text-align: justify;
+}
+
+
+.add-btn {
+    background-color: #327e55;
+    color: white;
+    border-style: solid;
+    height:35px;
+    width: 150px;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.add-btn:hover {
+    background-color: #44a571;
+}
+
+.cartContainer {
+    padding:20px 20px;
+    background-color:white; 
+    margin-left:10%; 
+    margin-right:10%; 
+    margin-top:10%; 
+    display: flex;
+    justify-content: flex-start;
+}
+
+.checkout {
+    height:2em;
+}
+.addedToCart {
+    margin-top:1em;
+    margin-left: 43%;
+    padding-top:1em;
+    padding-right:1em;
+    padding-left: 3em;
+    text-align: center;
+    opacity: 0;
+    display: flex;
+    position:fixed;
+    background-color: #54de94;
+    border-radius: 5px;
+    transition: opacity 0.5s
+}
+
+.addedToCart button {
+    display:inline;
+    cursor: pointer;
+    padding-left: 0.5em;
+    padding-right:0.5em;
+    border-radius: 2em;
+    margin-left:1em;
+    margin-bottom: 1em;
+    right: 0;
+    border:none;
+    background-color: #54de94;
+    font-weight: bold;
+}
+
+.addedToCart p {
+    color:black;
+}
+
+/* cart.html */
+.removedItem {
+    margin-top:1em;
+    margin-left: 43%;
+    padding-top:1em;
+    padding-right:1em;
+    padding-left: 3em;
+    text-align: center;
+    opacity: 0;
+    display: flex;
+    position:fixed;
+    background-color: #f85b5b;
+    border-radius: 5px;
+    transition: opacity 0.5s
+}
+
+.removedItem button {
+    display:inline;
+    cursor: pointer;
+    padding-left: 0.5em;
+    padding-right:0.5em;
+    border-radius: 2em;
+    margin-left:1em;
+    margin-bottom: 1em;
+    right: 0;
+    border:none;
+    background-color: #f85b5b;
+    font-weight: bold;
+    color:white
+}
+
+#show {
+    opacity: 100%;
+}
+
+#hide {
+    opacity: 0%;
+}
+
+.prodPic {
+    width: 15em;
+}
+.cartTable {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.inc-btn, .dec-btn {
+    background-color: white;
+    border-width: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s
+}
+
+.cart-btn:hover {
+    background-color: #cccbca;
+    
+}
+
+input { 
+    text-align: center; 
+}   
+
+.remove-btn {
+    background-color: #ff4747;
+    color: white;
+    border-radius: 3px;
+    height: 20px;
+    width: 10x;
+    cursor: pointer;
+    margin-right: 2px;
+    margin-top: 10px;
+    padding-right:1em;
+    padding-left:1em;
+    font-style: bold;
+    border-style: solid;
+    border-color:#ff4747;
+    transition: opacity 0.25s;
+}
+
+.remove-btn:hover {
+    opacity: 0.8;
+}
+
+.checkout {
+    background-color:#327e55;
+    color: white;
+    border-radius: 3px;
+    height: 3em;
+    width: 100%;
+    cursor: pointer;
+    margin-right: 2px;
+    margin-top: 10px;
+    padding-right:1em;
+    padding-left:1em;
+    font-style: bold;
+    border-style: solid;
+    border-color:#327e55;
+    transition: opacity 0.25s;
+    font-weight: bold;
+}
+
+.checkout:hover {
+    opacity: 0.8;
+}

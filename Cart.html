@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Cart</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <label class="logo"><a href="Home.html">First Step</a></label>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="Cart.html"><img class="cart"  src="images/shopping-cart.png"></a><span>0</span></li>
+        </ul>
+    </nav>
+    <div class="removedItem">
+        <p>Removed Item</p>
+        <button class="delBtn" onclick="remDel()">X</button>
+    </div>
+    <div class="cartContainer">
+        <table class="cartTable">
+            <tr>
+                <th>Product/Service</th>
+                <th>Image</th>
+                <th>Price</th>
+                <th>Quantity</th> 
+                <th>Total</th>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="js/script.js"></script>
+
+</html>
