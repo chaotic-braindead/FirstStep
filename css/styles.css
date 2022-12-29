@@ -402,7 +402,7 @@ input {
     h1 {
         padding: 2em 2em;
         text-align: center;
-        font-size: 33px;
+        font-size: 2em;
     }
     .about {
         padding-top: 7em;
@@ -414,12 +414,12 @@ input {
         text-align: center;
         margin: 0 10em;
         margin-bottom:4em;
-        font-size: 20px;
+        font-size: 1em;
     }
     .about a {
         padding: 1em 1em;
         margin-left: 44%;
-        font-size: 15px;
+        font-size: 80%;
     }
     .productsContainer { 
         padding:40px 20px;
