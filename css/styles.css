@@ -35,6 +35,7 @@ h2 {
     padding-top: 1em;
 }
 
+
 /* navbar */
 nav {
     background-color: #266041;
@@ -158,6 +159,10 @@ label.logo {
 .gallery {
     display: flexbox;
 }
+
+
+
+
 /* contactus.html */
 .contacts {
     background-color:white; 
@@ -235,6 +240,49 @@ table tr:nth-child(odd){
     background-color: #44a571;
 }
 
+
+.checkout {
+    height:2em;
+}
+.addedToCart, .removedItem{
+    margin-top:1em;
+    margin-left: 43%;
+    padding-top:1em;
+    padding-right:1em;
+    padding-left: 3em;
+    text-align: center;
+    opacity: 0;
+    display: flex;
+    position:fixed;
+    border-radius: 5px;
+    transition: opacity 0.5s;
+    color: white;
+}
+
+.addedToCart{
+    background-color: #54de94;
+}
+.addedToCart button, .removedItem button{
+    display:inline;
+    cursor: pointer;
+    padding-left: 0.5em;
+    padding-right:0.5em;
+    border-radius: 2em;
+    margin-left:1em;
+    margin-bottom: 1em;
+    right: 0;
+    border:none;
+    font-weight: bold;
+}
+.addedToCart button{
+    background-color: #54de94;
+}
+.addedToCart p {
+    color:black;
+}
+
+/* cart.html */
+
 .cartContainer {
     padding:20px 20px;
     background-color:white; 
@@ -245,68 +293,11 @@ table tr:nth-child(odd){
     justify-content: flex-start;
 }
 
-.checkout {
-    height:2em;
-}
-.addedToCart {
-    margin-top:1em;
-    margin-left: 43%;
-    padding-top:1em;
-    padding-right:1em;
-    padding-left: 3em;
-    text-align: center;
-    opacity: 0;
-    display: flex;
-    position:fixed;
-    background-color: #54de94;
-    border-radius: 5px;
-    transition: opacity 0.5s
-}
-
-.addedToCart button {
-    display:inline;
-    cursor: pointer;
-    padding-left: 0.5em;
-    padding-right:0.5em;
-    border-radius: 2em;
-    margin-left:1em;
-    margin-bottom: 1em;
-    right: 0;
-    border:none;
-    background-color: #54de94;
-    font-weight: bold;
-}
-
-.addedToCart p {
-    color:black;
-}
-
-/* cart.html */
-.removedItem {
-    margin-top:1em;
-    margin-left: 43%;
-    padding-top:1em;
-    padding-right:1em;
-    padding-left: 3em;
-    text-align: center;
-    opacity: 0;
-    display: flex;
-    position:fixed;
+.removedItem { 
     background-color: #f85b5b;
-    border-radius: 5px;
-    transition: opacity 0.5s
 }
 
 .removedItem button {
-    display:inline;
-    cursor: pointer;
-    padding-left: 0.5em;
-    padding-right:0.5em;
-    border-radius: 2em;
-    margin-left:1em;
-    margin-bottom: 1em;
-    right: 0;
-    border:none;
     background-color: #f85b5b;
     font-weight: bold;
     color:white
@@ -388,4 +379,194 @@ input {
 
 .checkout:hover {
     opacity: 0.8;
+}
+
+#all {
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width:1330px){
+    nav {
+        height: 80px;
+    }
+    nav ul li{
+        line-height: 77px;
+    }
+    nav ul li a {
+        font-size: 18px;
+    }
+    label.logo {
+        line-height: 77px;
+        padding: 0 30px;
+    }
+    h1 {
+        padding: 2em 2em;
+        text-align: center;
+        font-size: 33px;
+    }
+    .about {
+        padding-top: 7em;
+        padding-bottom: 5.5em;
+        background-size: 80em;
+    }
+    .about p {
+        padding-top: 0;
+        text-align: center;
+        margin: 0 10em;
+        margin-bottom:4em;
+        font-size: 20px;
+    }
+    .about a {
+        padding: 1em 1em;
+        margin-left: 33em;
+        font-size: 15px;
+    }
+    .productsContainer { 
+        padding:40px 20px;
+        margin: 4em 0; 
+    }
+    .cartContainer {
+        padding:40px 20px;
+        margin: 4em 0; 
+    }
+    .addedToCart{
+        margin-left:40%;
+    }
+    .removedItem{
+        margin-left:40%;
+    }
+}
+
+
+@media only screen and (max-width:700px){
+    nav {
+        height: 65px;
+    }
+    nav ul li{
+        line-height: 65px;
+    }
+    span {
+        padding-right: 1px;
+        font-size: 10px;
+    }
+    label.logo {
+        line-height: 70px;
+        font-size: 20px;
+        padding: 0 20px;
+    }
+    nav ul li a {
+        font-size: 11px;
+    }
+    .cart {
+        width: 10px;
+        height: 10px;
+        object-position: right;
+    }
+
+    h1 {
+        padding: 2em 1em;
+        text-align: center;
+        font-size: 25px;
+    }
+    .about {
+        padding-top: 7em;
+        padding-bottom: 5.5em;
+        background-size: 50em;
+    }
+    .about p {
+        padding-top: 0;
+        text-align: center;
+        margin: 0 4em;
+        margin-bottom:4em;
+        font-size: 15px;
+    }
+    .about a {
+        padding: 1em 1em;
+        margin-left: 13em;
+        font-size: 15px;
+    }
+
+    .mission {
+        padding-top: 4em;
+        padding-bottom: 4.25em;
+        padding-left: 2em;
+    }
+
+    .contacts {
+        margin: 4em 0;
+    }
+    .productsContainer { 
+        padding:20px 20px;
+        margin: 4em 0; 
+    }
+    
+    table {
+        font-size: 12px;
+    }
+    
+    table td {
+        height:15em;
+        padding: 1em 1em;
+    }
+
+    .productsContainer img {
+        width: 10em;
+    }
+        
+    .add-btn {
+        height:27px;
+        width: 70px;
+        border-radius: 4px;
+        font-size: 8px;
+    }
+
+    .addedToCart {
+        margin-top:1em;
+        margin-left: 37%;
+        padding-top:1em;
+        padding-right:1em;
+        padding-left: 2em;
+    }    
+
+    .cartContainer {
+        padding:1em 1em;
+        margin-left:0; 
+        margin-right:0; 
+        margin-top:4em; 
+    }
+    .cartTable {
+        font-size: 10px;
+        height: 15em;
+        margin: 0;
+    }
+    .inc-btn, .dec-btn {
+        padding-left: 3px;
+        padding-right: 3px;
+        font-size: 1em;
+    }
+    input {  
+        font-size: 1em;
+    }   
+    .remove-btn {
+        height: 15px;
+        width: 60px;
+        font-size: 10px;
+        margin-right: 2px;
+    }
+    .prodPic{
+        width: 10em;
+    }
+    .checkout{
+        font-size: 10px;
+        margin-top: 0;
+    }
+
+    .removedItem {
+        margin-top:1em;
+        margin-left: 37%;
+        padding-top:1em;
+        padding-right:1em;
+        padding-left: 2em;
+    }
 }
