@@ -407,7 +407,7 @@ input {
     .about {
         padding-top: 7em;
         padding-bottom: 5.5em;
-        background-size: 85em;
+        background-size: 100%;
     }
     .about p {
         padding-top: 0;
@@ -476,7 +476,7 @@ input {
     .about {
         padding-top: 7em;
         padding-bottom: 5.5em;
-        background-size: 60em;
+        background-size: 136%;
     }
     .about p {
         padding-top: 0;
