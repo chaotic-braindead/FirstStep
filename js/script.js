@@ -1,5 +1,3 @@
-// TODO: add checkout button
-
 let items = document.querySelectorAll(".add-btn");
 let noti = document.querySelector('.addedToCart');
 let removed = document.querySelector('.removedItem');
@@ -107,9 +105,9 @@ function displayCart(){
             cartTable.innerHTML += `
             <tr id="${item.id}">
                 <td>
-                    ${item.name}
+                    ${item.name}<br>
+                    <img class="prodPic"src="images/${item.name}.png">
                 </td>
-                <td><img class="prodPic"src="images/${item.name}.png"></td>
                 <td>₱${item.price.toLocaleString()}</td>
                 <td>
                     <button class="dec-btn" onclick="count(${item.id}, -1)">-</button>
@@ -126,12 +124,10 @@ function displayCart(){
             <tr id="all">
                 <td></td>
                 <td></td>
-                <td></td>
                 <td>${amount}</td> 
                 <td>₱${total.toLocaleString()}</td>
             </tr>
             <tr id="checkout">
-                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -180,8 +176,3 @@ function count(id, qty){
 
 init()
 displayCart()
-
-// resets the localStorage (or just clear cookies lool)
-// localStorage.setItem('cartNo',  0);
-// localStorage.setItem('inCart',  null);
-// localStorage.setItem('total',  null);
