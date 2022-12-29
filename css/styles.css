@@ -1,4 +1,3 @@
-/* TODO: fix the janky layout */
 *{
     margin: 0 0 0 0px;
     padding: 0 0 0 0px;
@@ -444,19 +443,19 @@ input {
 }
 
 
-@media only screen and (max-width:1000px){
+@media only screen and (max-width:900px){
     nav {
         height: 65px;
     }
     nav ul li{
-        line-height: 65px;
+        line-height: 60px;
     }
     span {
         padding-right: 1px;
         font-size: 10px;
     }
     label.logo {
-        line-height: 70px;
+        line-height: 65px;
         font-size: 20px;
         padding: 0 20px;
     }
@@ -488,7 +487,7 @@ input {
     }
     .about a {
         padding: 1em 1em;
-        margin-left: 42%;
+        margin-left: 40%;
         font-size: 15px;
     }
 
