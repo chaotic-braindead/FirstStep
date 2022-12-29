@@ -494,7 +494,16 @@ input {
     .mission {
         padding-top: 4em;
         padding-bottom: 4.25em;
-        padding-left: 2em;
+        padding-left: 2em;  
+    }
+
+    .who h2, .our h2 {
+        font-size: 90%;
+    
+    }
+    .who p, .our p {
+        font-size: 90%;
+    
     }
 
     .contacts {
