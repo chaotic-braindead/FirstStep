@@ -385,7 +385,7 @@ input {
 }
 
 
-@media only screen and (max-width:1400px){
+@media only screen and (max-width:1100px){
     nav {
         height: 80px;
     }
@@ -407,7 +407,7 @@ input {
     .about {
         padding-top: 7em;
         padding-bottom: 5.5em;
-        background-size: 100%;
+        background-size: 120%;
     }
     .about p {
         padding-top: 0;
@@ -443,24 +443,32 @@ input {
 }
 
 
-@media only screen and (max-width:900px){
+@media only screen and (max-width:700px){
     nav {
         height: 65px;
     }
     nav ul li{
-        line-height: 60px;
+        line-height: 61px;
+        margin: 0 0px;
     }
+    nav ul {
+        float: right;
+        margin-right:10px;
+    }
+    nav ul li a {
+        font-size: 11px;
+        padding: 7px 7px;
+    }
+    
     span {
-        padding-right: 1px;
+        padding-right: 10px;
         font-size: 10px;
     }
     label.logo {
         line-height: 65px;
-        font-size: 90%;
-        padding: 0 20px;
-    }
-    nav ul li a {
-        font-size: 65%;
+        font-size: 15px;
+        padding-left: 20px;
+        padding-right: 0;
     }
     .cart {
         width: 10px;
@@ -487,14 +495,14 @@ input {
     }
     .about a {
         padding: 1em 1em;
-        margin-left: 43%;
-        font-size: 80%;
+        margin-left: 40%;
+        font-size: 0.8em;
     }
 
     .mission {
         padding-top: 4em;
         padding-bottom: 4.25em;
-        padding-left: 2em;  
+        padding-left: 1em;  
     }
 
     .who h2, .our h2 {
@@ -510,12 +518,16 @@ input {
         margin: 4em 0;
     }
     .productsContainer { 
-        padding:20px 20px;
+        padding:20px 10px;
         margin: 4em 0; 
     }
     
     table {
-        font-size: 12px;
+        font-size: 13px;
+    }
+
+    .items tr{
+        line-height: 20px;
     }
     
     table td {
@@ -528,15 +540,15 @@ input {
     }
         
     .add-btn {
-        height:27px;
-        width: 70px;
+        height:24px;
+        width: 60px;
         border-radius: 4px;
         font-size: 8px;
     }
 
     .addedToCart {
         margin-top:1em;
-        margin-left: 37%;
+        margin-left: 7.5em;
         padding-top:1em;
         padding-right:1em;
         padding-left: 2em;
@@ -549,35 +561,38 @@ input {
         margin-top:4em; 
     }
     .cartTable {
-        font-size: 10px;
-        height: 15em;
+        font-size:12px;
         margin: 0;
     }
     .inc-btn, .dec-btn {
         padding-left: 3px;
         padding-right: 3px;
-        font-size: 1em;
+        font-size: 0.75em;
     }
     input {  
-        font-size: 1em;
+        font-size: 0.75em;
     }   
     .remove-btn {
         height: 15px;
-        width: 60px;
-        font-size: 10px;
+        width: 55px;
+        font-size: 8px;
         margin-right: 2px;
     }
+
     .prodPic{
         width: 10em;
     }
     .checkout{
-        font-size: 10px;
-        margin-top: 0;
+        font-size: 8px;
+        margin: 0 0;
+    }
+    #checkout{
+        line-height: 1px;
     }
 
     .removedItem {
         margin-top:1em;
-        margin-left: 37%;
+        margin-left: 7.5em;
         padding-top:1em;
         padding-right:1em;
         padding-left: 2em;
