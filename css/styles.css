@@ -471,19 +471,19 @@ input {
     h1 {
         padding: 2em 1em;
         text-align: center;
-        font-size: 20px;
+        font-size: 1.5em;
     }
     .about {
         padding-top: 7em;
         padding-bottom: 5.5em;
-        background-size: 136%;
+        background-size: 57em;
     }
     .about p {
         padding-top: 0;
         text-align: center;
         margin: 0 4em;
         margin-bottom:4em;
-        font-size: 13px;
+        font-size: 1em;
     }
     .about a {
         padding: 1em 1em;
