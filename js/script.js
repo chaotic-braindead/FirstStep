@@ -46,7 +46,7 @@ function remDel(){
 
 function init(){
     let cartNums = localStorage.getItem('cartNo');
-    document.querySelector('li span').textContent = cartNums;
+    document.querySelector('li span').textContent = !cartNums ? 0 : cartNums;
 
 }
 
