@@ -37,9 +37,6 @@ for(let i = 0; i < items.length; i++){
     });
 }
 
-// delBtn.addEventListener('click', () => {
-//     noti.id = 'hide';
-// })
 function cartDel(){
     noti.id = 'hide';
 }
@@ -98,10 +95,22 @@ function displayCart(){
     let cartTable = document.querySelector('.cartTable');
     let total = parseInt(localStorage.getItem('total'));
     let amount = localStorage.getItem('cartNo');
+    let cartTotal = document.getElementById('total');
+    let amnt = document.getElementById('amnt');
     if(cartProducts && cartTable && total){
         Object.values(cartProducts).map(item => {
             let tr = document.getElementById(`${item.id}`);
-            if(tr) return;
+            if(tr){
+                let q = document.getElementById(`itemTotal${item.id}`);
+                let inp = document.getElementById(`inp${item.id}`);
+                let remBtn = document.getElementById(`remove-btn${item.id}`);   
+             
+                q.textContent = `₱${(item.price * item.amount).toLocaleString()}`;
+                inp.outerHTML = `<input id="inp${item.id}" type="text" value="${item.amount}" size="1" maxlength="2" disabled></input>`
+                remBtn.outerHTML = `<button id="remove-btn${item.id}" class="remove-btn" onclick="count(${item.id}, ${-item.amount})">Remove</button>`;
+
+                return;
+            }
             cartTable.innerHTML += `
             <tr id="${item.id}">
                 <td>
@@ -111,21 +120,26 @@ function displayCart(){
                 <td>₱${item.price.toLocaleString()}</td>
                 <td>
                     <button class="dec-btn" onclick="count(${item.id}, -1)">-</button>
-                    <input type="text" value="${item.amount}" size="1" maxlength="2" disabled>
+                    <input id="inp${item.id}" type="text" value="${item.amount}" size="1" maxlength="2" disabled>
                     <button class="inc-btn" onclick="count(${item.id}, 1)">+</button>
                     <br>
-                    <button class="remove-btn" onclick="count(${item.id}, ${-item.amount})">Remove</button>
+                    <button id="remove-btn${item.id}"class="remove-btn" onclick="count(${item.id}, ${-item.amount})">Remove</button>
                 </td>
-                <td>₱${(item.price * item.amount).toLocaleString()}</td>
+                <td id="itemTotal${item.id}">₱${(item.price * item.amount).toLocaleString()}</td>
             </tr>
             `;
         });
+        if(cartTotal && amnt){
+            cartTotal.textContent = `₱${total.toLocaleString()}`;
+            amnt.textContent = amount;
+            return;
+        }
         cartTable.innerHTML += `
             <tr id="all">
                 <td></td>
                 <td></td>
-                <td>${amount}</td> 
-                <td>₱${total.toLocaleString()}</td>
+                <td id="amnt">${amount}</td> 
+                <td id="total">₱${total.toLocaleString()}</td>
             </tr>
             <tr id="checkout">
                 <td></td>
@@ -138,28 +152,22 @@ function displayCart(){
             </tr>
             </table>
         `;
-        // thank god for toLocalString() 
     }
 }
-// for some reason, passing the product id directly to the update functions outputs an error, so i made this function which acts as a "middle-man" 
-//  lmao i hate javascript T_T
 
 function count(id, qty){
     let cartProducts = JSON.parse(localStorage.getItem('inCart'));
     qty = parseInt(qty);
+    addToCart(qty);
     if(cartProducts[products[id].name].amount + qty >= 0){
-        addToCart(qty);
+        updateTotal(products[id], qty);
     }
-
     if(cartProducts[products[id].name].amount + qty > 0){
         updateCount(products[id], qty);
-        updateTotal(products[id], qty);
-        window.location.reload(); // i'm sure there's a better way to reload the page to show the new total but i suck at js 
     }
     else{
         removed.id = 'show';
         cartProducts[products[id].name].amount = 0;
-        updateTotal(products[id], qty);
         delete cartProducts[products[id].name];
         let tr = document.getElementById(`${id}`);
         let all = document.getElementById('all');
@@ -171,8 +179,6 @@ function count(id, qty){
     }
     displayCart(); 
 }
-
-
 
 init()
 displayCart()
