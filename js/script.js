@@ -15,13 +15,13 @@ let products = [
     amount: 0
 },
 {
-    name: 'Shoe customization',
+    name: 'Shoe Customization',
     id: 2,
     price: 2500,
     amount: 0
 },
 {
-    name: 'Recycled shoe',
+    name: 'Recycled Shoe',
     id: 3,
     price: 2750,
     amount: 0
