@@ -501,16 +501,20 @@ input {
 
     .mission {
         padding-top: 4em;
-        padding-bottom: 4.25em;
+        padding-bottom: 3em;
         padding-left: 1em;  
+        display: grid;
     }
 
+    .who, .our{
+        width: 93%;
+        margin-bottom: 2em;
+    }
     .who h2, .our h2 {
-        font-size: 90%;
-    
+        font-size: 100%;
     }
     .who p, .our p {
-        font-size: 90%;
+        font-size: 92%;
     
     }
 
